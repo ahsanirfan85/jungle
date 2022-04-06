@@ -6,7 +6,7 @@
 
   <% if enhanced_cart.count == 0 %>
     <div class="alert alert-danger">The cart is empty! Add a product to your cart to see it here.</div>
-    <div><%= link_to 'Home', :root %></div>
+    <div><%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %></div>
   <% else %>
     <div class="panel panel-default items">
     <table class="table table-bordered">

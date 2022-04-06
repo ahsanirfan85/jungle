@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   helper_method :cart_subtotal_cents
 
   def order_subtotal_cents
-    order.line_items.map {|entry| entry[:product].price_cents * entry[:quantity]}.sum
+    @order.line_items.map {|entry| entry.product.price_cents * entry.quantity}.sum
   end
   helper_method :order_subtotal_cents
 
