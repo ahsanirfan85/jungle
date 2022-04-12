@@ -2,12 +2,17 @@
 
 A mini e-commerce application built with Rails 4.2.
 
-Provides basic functions to allow users to:
+Allows users to:
   - register for an account
   - login to their account
   - visit product pages to view product
   - add products to their carts
   - use their carts to checkout their selections and pay for them using their credit cards
+
+Allows admins to:
+  - create new product categories
+  - create new products, add their details and upload images
+  - view some statistics
 
 ## Setup
 
