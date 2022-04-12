@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => {:case_sensitive => false}
   validates :password, length: { minimum: 5 }
 
-  def authenticate_with_credentials(email, password)
+  def self.authenticate_with_credentials(email, password)
     parsedEmail = email.strip.downcase
     user = User.find_by_email(parsedEmail)
     if (user && user.authenticate(password))
@@ -15,5 +15,9 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+
+  def authentication(email, password)
+    self.class.authenticate_with_credentials(email, password)
   end
 end

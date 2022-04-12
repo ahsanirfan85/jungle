@@ -128,7 +128,7 @@ RSpec.describe User, type: :model do
         user.password = "tune-funky-refridgerator"
         user.password_confirmation = "tune-funky-refridgerator"
         user.save
-        expect(user.authenticate_with_credentials(user.email, user.password)).to match(user)
+        expect(user.authentication(user.email, user.password)).to match(user)
       end
     end
 
@@ -141,7 +141,7 @@ RSpec.describe User, type: :model do
         user.password = "tune-funky-refridgerator"
         user.password_confirmation = "tune-funky-refridgerator"
         user.save
-        expect(user.authenticate_with_credentials(user.email, "blahblah")).to be_nil
+        expect(user.authentication(user.email, "blahblah")).to be_nil
       end
     end
 
@@ -154,7 +154,7 @@ RSpec.describe User, type: :model do
         user.password = "tune-funky-refridgerator"
         user.password_confirmation = "tune-funky-refridgerator"
         user.save
-        expect(user.authenticate_with_credentials("ahsanirfan@gmail.com", user.password)).to be_nil
+        expect(user.authentication("ahsanirfan@gmail.com", user.password)).to be_nil
       end
     end
 
@@ -167,7 +167,7 @@ RSpec.describe User, type: :model do
         user.password = "tune-funky-refridgerator"
         user.password_confirmation = "tune-funky-refridgerator"
         user.save
-        expect(user.authenticate_with_credentials(" ahsan.irfan@gmail.com ", user.password)).to match(user)
+        expect(user.authentication(" ahsan.irfan@gmail.com ", user.password)).to match(user)
       end
     end
 
@@ -180,7 +180,7 @@ RSpec.describe User, type: :model do
         user.password = "tune-funky-refridgerator"
         user.password_confirmation = "tune-funky-refridgerator"
         user.save
-        expect(user.authenticate_with_credentials("Ahsan.Irfan@Gmail.com", user.password)).to match(user)
+        expect(user.authentication("Ahsan.Irfan@Gmail.com", user.password)).to match(user)
       end
     end
   end
