@@ -14,6 +14,8 @@ Allows admins to:
   - create new products, add their details and upload images
   - view some statistics
 
+Screenshots provided at the end
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
@@ -36,3 +38,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screenshots
+![Jungle Home Page](https://github.com/ahsanirfan85/jungle/blob/master/docs/01-jungle-home-page.png?raw=true)
+![Jungle Admin Dashboard](https://github.com/ahsanirfan85/jungle/blob/master/docs/02-jungle-admin-dashboard.png?raw=true)
+![Jungle Admin Products Page](https://github.com/ahsanirfan85/jungle/blob/master/docs/03-jungle-admin-products-page.png?raw=true)
+![Jungle User Cart](https://github.com/ahsanirfan85/jungle/blob/master/docs/04-jungle-user-cart.png?raw=true)
